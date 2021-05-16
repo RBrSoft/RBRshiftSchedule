@@ -35,3 +35,13 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### schedule Frontend ###
+# compiled output
+/scheduleFrontend/dist
+/scheduleFrontend/tmp
+/scheduleFrontend/out-tsc
+# Only exists if Bazel was run
+/scheduleFrontend/bazel-out
+# dependencies
+/scheduleFrontend/node_modules
