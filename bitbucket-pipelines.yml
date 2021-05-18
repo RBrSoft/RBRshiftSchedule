@@ -17,3 +17,5 @@ pipelines:
             - gradle
           script:
             - gradle build
+          after-script:
+            - pipe: atlassian/checkstyle-report:0.2.0
