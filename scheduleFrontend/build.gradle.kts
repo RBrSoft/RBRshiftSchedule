@@ -1,5 +1,6 @@
+
 plugins {
-  id("com.moowork.node") version "0.12"
+  id("com.moowork.node") version "1.2.0"
 }
 
 group = "de.rbrsoft"
@@ -13,7 +14,7 @@ node {
   nodeModulesDir = file("${project.projectDir}")
 }
 
-task<com.moowork.gradle.node.task.NpmTask>("build") {
-  args = listOf("run", "build")
+task<com.moowork.gradle.node.npm.NpmTask>("build") {
+  setArgs(listOf("run", "build"))
   dependsOn("npmInstall")
 }
