@@ -14,6 +14,12 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: "abc", teamName: "Die Schnullies"},
       {id: "cde", teamName: "Team1715"}
     ];
-    return {teams};
+
+    const members = [
+      {id: "1234", nickname: "Kunibert"},
+      {id: "4567", nickname: "Wilhelm"},
+    ];
+
+    return {teams, members};
   }
 }
