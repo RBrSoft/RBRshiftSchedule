@@ -1,7 +1,7 @@
 <h2>Deine Teams:</h2>
-<ul>
+<ul class="card-list">
   <li *ngFor="let team of teams">
-    {{ team.teamName }}
+    <h3>{{ team.teamName }}</h3>
     <a routerLink="/teams/{{team.id}}/members">Members</a>
   </li>
 </ul>

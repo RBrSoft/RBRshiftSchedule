@@ -1,12 +1,17 @@
 <div style="text-align: center">
-
-  <h1>
-    <span>Servus bei meinem {{ title }}!</span>
-  </h1>
+  <div class="header">
+    <a routerLink="/">
+      <img src="../assets/shift-schedule-logo.png" alt=""/>
+    </a>
+    <h1>
+      Der professionelle Schichtplan für Dein Team
+    </h1>
+    <a href="#">Login</a>
+  </div>
   <nav>
-   <a routerLink="/teams">Teams</a>
+    <a routerLink="/teams">Teams</a>
   </nav>
-  <router-outlet></router-outlet>
-
-
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
