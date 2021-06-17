@@ -37,6 +37,9 @@ nav a {
   margin: 0.5rem;
   display: inline-block;
 }
+nav a:hover {
+  background-color: #7d8570ff;
+}
 
 .main-content{
   padding: 0.5rem;
