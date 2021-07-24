@@ -1,4 +1,6 @@
 export class Member {
-  id: string;
-  nickname: string;
+  constructor(
+    public id: string,
+    public nickname: string) {
+  }
 }
