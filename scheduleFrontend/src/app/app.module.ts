@@ -8,6 +8,10 @@ import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './in-memory-data.service';
 import {MemberComponent} from './member/member.component';
 import {AppRoutingModule} from './app-routing.module';
+import {environment} from '../environments/environment';
+
+// import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+// import { GoogleLoginProvider } from 'angularx-social-login';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,16 @@ import {AppRoutingModule} from './app-routing.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    // Um das Backend zu emulieren
-    InMemoryWebApiModule.forRoot(
+    // Entweder reelles Backend oder das Backend emulieren
+    environment.production ? [] : InMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}
     ),
-    AppRoutingModule
+    AppRoutingModule,
+//    SocialLoginModule
   ],
-  providers: [],
+  providers: [
+   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

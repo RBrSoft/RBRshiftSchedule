@@ -14,7 +14,7 @@ export class MemberService {
 
   getMembers(teamId: string): Observable<Member[]> {
     console.log('Fetching members for team: ' + teamId);
-    const url = 'api/members/';
+    const url = 'api/teams/' + teamId + '/members/';
     return this.http.get<Member[]>(url);
   }
 }

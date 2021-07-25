@@ -37,7 +37,7 @@ tasks.withType<Test> {
 
 tasks.getByName<org.springframework.boot.gradle.tasks.bundling.BootJar>("bootJar") {
 	from("scheduleFrontend/dist/scheduleFrontend") {
-		include("*")
+		include("**/*")
 		into("public")
 	}
 }
