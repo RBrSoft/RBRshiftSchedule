@@ -16,6 +16,6 @@ node {
 }
 
 task<com.moowork.gradle.node.npm.NpmTask>("build") {
-  setArgs(listOf("run", "build"))
+  setArgs(listOf("run", "build-production"))
   dependsOn("npmInstall")
 }

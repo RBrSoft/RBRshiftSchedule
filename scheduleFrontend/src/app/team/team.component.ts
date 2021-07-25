@@ -21,7 +21,7 @@ export class TeamComponent implements OnInit {
     this.getTeams();
   }
 
-  private getTeams() {
+  private getTeams(): any {
     this.teamService.getTeamForCurrentUser().subscribe(
       teams => this.teams = teams
     );

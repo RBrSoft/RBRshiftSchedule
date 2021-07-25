@@ -14,7 +14,8 @@ export class TeamService {
   }
 
   getTeamForCurrentUser(): Observable<Team[]> {
-    const url = "api/teams";
+    const userId = 'ToDo';
+    const url = 'api/users/' + userId + '/teams';
     return this.http.get<Team[]>(url);
   }
 }
