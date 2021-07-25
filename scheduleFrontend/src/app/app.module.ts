@@ -8,7 +8,6 @@ import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './in-memory-data.service';
 import {MemberComponent} from './member/member.component';
 import {AppRoutingModule} from './app-routing.module';
-import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,7 @@ import {environment} from '../environments/environment';
     BrowserModule,
     HttpClientModule,
     // Um das Backend zu emulieren
-    environment.production ? [] : InMemoryWebApiModule.forRoot(
+    InMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}
     ),
     AppRoutingModule
