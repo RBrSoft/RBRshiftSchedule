@@ -6,12 +6,18 @@
     <h1>
       Der professionelle Schichtplan für Dein Team
     </h1>
-    <a href="#">Login</a>
+    <span class="command-link"
+          *ngIf="!loggedIn"
+          (click)="socialSignIn('google')">Login</span>
+    <span class="command-link"
+          *ngIf="loggedIn"
+          (click)="socialSignOut()">{{user.firstName}}</span>
   </div>
-  <nav>
-    <a routerLink="/teams">Teams</a>
+  <nav >
+    <p *ngIf="!loggedIn">To proceed, please log in</p>
+    <a *ngIf="loggedIn" routerLink="/teams">Teams</a>
   </nav>
   <div class="main-content">
-    <router-outlet></router-outlet>
+    <router-outlet *ngIf="loggedIn"></router-outlet>
   </div>
 </div>

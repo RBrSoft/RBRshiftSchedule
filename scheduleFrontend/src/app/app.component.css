@@ -25,12 +25,18 @@
     display: unset;
   }
 }
+.command-link {
+  color: darkblue;
+}
+.command-link:hover {
+  background-color: #7d8570ff;
+}
 
 nav {
   background-color: #646f58ff;
-  text-align: left;
+  text-align: center;
 }
-nav a {
+nav > * {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
