@@ -11,6 +11,8 @@ import {AppRoutingModule} from './app-routing.module';
 
 import {FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule} from 'angularx-social-login';
 
+// import {TokenInterceptor} from './http-interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,12 @@ import {FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, Soc
           }
         ]
       } as SocialAuthServiceConfig,
-    }
+    },
+//    {
+//      provide: HTTP_INTERCEPTORS,
+//      useClass: TokenInterceptor,
+//      multi: true
+//    }
   ],
   bootstrap: [AppComponent]
 })

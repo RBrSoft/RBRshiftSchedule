@@ -22,6 +22,8 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+// https://mvnrepository.com/artifact/com.google.api-client/google-api-client
+	implementation("com.google.api-client:google-api-client:1.32.1")
 }
 
 tasks.withType<KotlinCompile> {

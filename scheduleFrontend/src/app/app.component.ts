@@ -28,6 +28,8 @@ export class AppComponent {
         console.log(userData);
         this.user = userData;
         this.loggedIn = (userData != null);
+        localStorage.setItem('userId', userData.id);
+        localStorage.setItem('userToken', userData.idToken);
       }
     );
   }
@@ -37,6 +39,8 @@ export class AppComponent {
       () => {
         this.user = null;
         this.loggedIn = false;
+        localStorage.setItem('userId', null);
+        localStorage.setItem('userToken', null);
       }
     );
   }

@@ -14,7 +14,7 @@ export class TeamService {
   }
 
   getTeamForCurrentUser(): Observable<Team[]> {
-    const userId = 'ToDo';
+    const userId = localStorage.getItem('userId');
     const url = 'api/users/' + userId + '/teams';
     return this.http.get<Team[]>(url);
   }

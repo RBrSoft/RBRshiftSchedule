@@ -12,6 +12,7 @@ class ShiftScheduleRestController {
     @GetMapping("/users/{id}/teams")
     fun getTeamsForUser(
         @PathVariable(name = "id") userId: String
+//        @RequestHeader("Authorization") tokenId: String
     ): List<TeamEto> {
         return listOf(
             TeamEto("1", "Das große Team"),
